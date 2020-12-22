@@ -11,7 +11,7 @@
 
 
 
-<title>Causal Latency and Strength</title>
+<title>Animations used in Experiment 1</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -263,6 +266,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -270,6 +336,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -320,32 +396,25 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Causal Latency and Strength</h1>
+<h1 class="title toc-ignore">Animations used in Experiment 1</h1>
 
 </div>
 
 
-<div class="column-right">
-<p><img src="images/home/squirrel.png" /></p>
+<div id="zusätzliche-illustration-zu-konfidenzintervallen" class="section level1">
+<h1><span class="header-section-number">1</span> Zusätzliche Illustration zu Konfidenzintervallen</h1>
+<p>Wir haben hier für Sie noch eine sehr anschauliche Simulation für Konfidenzintervalle eingeblendet, welche von der Seite <a href="https://rpsychologist.com">https://rpsychologist.com</a> stammt. Sie können in der App die Stichprobengröße und die Konfidenzintervallbreite verändern und dann schauen, was passiert.</p>
+<div id="simulation-für-konfidenzintervalle" class="section level2">
+<h2><span class="header-section-number">1.1</span> Simulation für Konfidenzintervalle</h2>
+<p><br /> <iframe width="800" height="600" src="stimuli/G1_G2_ntime.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br /> <br /></p>
 </div>
-<p>Herzlich willkommen auf der Begleitseite für die Seminare der Module <strong>Quantitative Methoden I</strong> (Wintersemester) und <strong>Quantitative Methoden II</strong> (Sommersemester) im Studienfach Psychologie an der Uni Göttingen. In den Seminaren sollen Sie die theoretischen Inhalte der Vorlesung durch praktische Anwendung vertiefen. Diese Seite soll Sie dabei unterstützen.</p>
-<p><br></p>
-<p>Sie finden hier Zusammenfassungen und Tutorials der einzelnen Sitzungen.</p>
-<p><br></p>
-<p>Zu den verschiedenen Sitzungen gelangen Sie über die jeweiligen Menüs oben in der Navigationsleiste.</p>
-<p><br></p>
-<p>Eine Übersicht über die Lernmaterialien (Übungsdaten und Musterlösungen) haben wir auf separaten Seiten für Sie zusammengestellt. Dort können Sie sich die Materialien auch direkt downloaden. Alternativ finden Sie natürlich auch alle Dateien in Stud-IP.</p>
-<p><br></p>
-<ul>
-<li><p>Zu den Materalien für <strong>Quanti I</strong> geht es <a href="page-q1_materials.html">hier</a>.</p></li>
-<li><p>Zu den Materialien für <strong>Quanti II</strong> geht es <a href="page-q2_materials.html">hier</a>.</p></li>
-</ul>
-<p><br></p>
-<p>Viel Spaß!</p>
+</div>
 
 <p><font size="-1.5">Copyright &copy; 2020 Simon Stephan. All rights reserved.</font></p>
 
 
+</div>
+</div>
 
 </div>
 
@@ -378,6 +447,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
