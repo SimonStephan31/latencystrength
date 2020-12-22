@@ -34,7 +34,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -80,7 +80,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -288,7 +287,7 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
     Home
   </a>
@@ -297,13 +296,23 @@ $(document).ready(function () {
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="glyphicon glyphicon-book"></span>
      
-    Materials
+    Animations Experiment 1
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Delta-P = 1.0</li>
     <li>
-      <a href="experiment_1.html">Animations Experiment 1</a>
+      <a href="stimuli/G1_G2_ntime_power100.html">Latency: G1 vs. G2</a>
+    </li>
+    <li>
+      <a href="stimuli/G1_G3_ntime_power100.html">Latency: G1 vs. G3</a>
+    </li>
+    <li>
+      <a href="stimuli/G1_G3_ntime_power100.html">Latency: G1 vs. G4</a>
+    </li>
+    <li>
+      <a href="stimuli/G1_G3_ntime_power100.html">Latency: G2 vs. G3</a>
     </li>
   </ul>
 </li>
@@ -324,23 +333,16 @@ $(document).ready(function () {
 </div>
 
 
-<div class="column-right">
-<p><img src="images/home/squirrel.png" /></p>
+<p>Please use the navigation bar to go to the different animations that were shown in the studies.</p>
+<p>Some more background information on the studies is given below.</p>
+<p><br></p>
+<div id="experiment-1" class="section level1">
+<h1>Experiment 1</h1>
+<p><br></p>
+<p>The following six pairs of gamma distributions were tested:</p>
+<p><img src="images/latencies.svg" /></p>
+<p>The pairs were manipulated between subjects.</p>
 </div>
-<p>Herzlich willkommen auf der Begleitseite für die Seminare der Module <strong>Quantitative Methoden I</strong> (Wintersemester) und <strong>Quantitative Methoden II</strong> (Sommersemester) im Studienfach Psychologie an der Uni Göttingen. In den Seminaren sollen Sie die theoretischen Inhalte der Vorlesung durch praktische Anwendung vertiefen. Diese Seite soll Sie dabei unterstützen.</p>
-<p><br></p>
-<p>Sie finden hier Zusammenfassungen und Tutorials der einzelnen Sitzungen.</p>
-<p><br></p>
-<p>Zu den verschiedenen Sitzungen gelangen Sie über die jeweiligen Menüs oben in der Navigationsleiste.</p>
-<p><br></p>
-<p>Eine Übersicht über die Lernmaterialien (Übungsdaten und Musterlösungen) haben wir auf separaten Seiten für Sie zusammengestellt. Dort können Sie sich die Materialien auch direkt downloaden. Alternativ finden Sie natürlich auch alle Dateien in Stud-IP.</p>
-<p><br></p>
-<ul>
-<li><p>Zu den Materalien für <strong>Quanti I</strong> geht es <a href="page-q1_materials.html">hier</a>.</p></li>
-<li><p>Zu den Materialien für <strong>Quanti II</strong> geht es <a href="page-q2_materials.html">hier</a>.</p></li>
-</ul>
-<p><br></p>
-<p>Viel Spaß!</p>
 
 <p><font size="-1.5">Copyright &copy; 2020 Simon Stephan. All rights reserved.</font></p>
 
@@ -352,7 +354,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
